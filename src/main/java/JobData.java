@@ -22,7 +22,7 @@ public class JobData {
      * without duplicates, for a given column.
      *
      * @param field The column to retrieve values from
-     * @return List of all of the values of the given field
+     * @return List of all the values of the given field
      */
     public static ArrayList<String> findAll(String field) {
 
@@ -72,7 +72,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toLowerCase().contains(value)) {
                 jobs.add(row);
             }
         }
@@ -94,14 +94,11 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
-
-
-            for (Map.Entry<String, String> job : row.entrySet()) {
-
-                if (job.getValue().contains(value) && !jobs.contains(row)) {
+            for (HashMap.Entry<String, String> job : row.entrySet()) {
+                if (job.getValue().toLowerCase().contains(value) && !jobs.contains(row)) {
                     jobs.add(row);
-                }// try to use .equalsIgnoreCase()? to pass last test
-                    //(w3schools)
+                }
+
             }
         }
 
