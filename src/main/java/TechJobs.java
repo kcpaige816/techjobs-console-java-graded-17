@@ -120,9 +120,8 @@ public class TechJobs {
     // Print a list of jobs                      //key type //value type
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
-        for (int job = 0; job < jobs.length; job++) {
+        for (int job = 0; job < jobs.size(); job++) {
 
             System.out.println(jobs[job]);
         }
