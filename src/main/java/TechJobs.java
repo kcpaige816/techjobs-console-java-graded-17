@@ -70,14 +70,14 @@ public class TechJobs {
         }
     }
 
-    // ﻿Returns the key of the selected item from the choices Dictionary
+    // Returns the key of the selected item from the choices Dictionary
     private static String getUserSelection(String menuHeader, HashMap<String, String> choices) {
 
         int choiceIdx = -1;
         Boolean validChoice = false;
         String[] choiceKeys = new String[choices.size()];
 
-        // Put the choices in an ordered structure so we can
+        // Put the choices in an ordered structure, so we can
         // associate an integer with each one
         int i = 0;
         for (String choiceKey : choices.keySet()) {
@@ -117,9 +117,52 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-    // Print a list of jobs
+    // Print a list of jobs                      //key type //value type
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        for (int job = 0; job < jobs.length; job++) {
+
+            System.out.println(jobs[job]);
+        }
+
+           // someJobs.method() - use this in a for loop to get data and satisfy parameter
+        // ArrayList<String> results = JobData.findAll(); // one findAll variable for each key name?
+
+        System.out.println("\n*****");
+//        position type:
+//        name:
+//        employer:
+//        location:
+//        core competency:
+        System.out.println("*****");
     }
 }
+
+
+
+//
+//        for (HashMap<String, String> row : allJobs) {
+//
+//          String aValue = row.get(column);
+//
+//            if (aValue.contains(value)) {
+//        jobs.add(row);
+//            }
+//                    }
+//
+//                    return jobs;
+
+//       ArrayList<String> results = JobData.findAll(columnChoice);
+//
+//
+//        // Print list of skills, employers, etc.
+//        for (String item : results) {
+//        System.out.println(item);
+//                    }
+
+//To do this, you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
+// While you can get each of the items out of the HashMap using the known keys (employer, location, etc.),
+// think instead about creating a nested loop to loop over each HashMap. If a new field is added to the job records,
+// this approach will print out the new field without any updates to printJobs.
