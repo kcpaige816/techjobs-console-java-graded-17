@@ -120,17 +120,21 @@ public class TechJobs {
     // Print a list of jobs                      //key type //value type
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
+        if(someJobs.size() == 0) {
+            System.out.println("No Results");
+        }
 
-        for (int i = 0; i < jobs.size(); job++) {
+        for (int job = 0; job < i.size(); job++) {
 
             System.out.println();
         }
+
 //        for (Map.Entry<String, Double> student : students.entrySet()) {
 //            System.out.println(student.getKey() + " (" + student.getValue() + ")");
 //            sum += student.getValue();
 //        } //// map loop structure from LC chap. 3, use instead of repeated variables
-              //   |nest together|
-           // someJobs.method() - use this in a for loop to get data and satisfy parameter
+        // |nest together|
+
 
         System.out.println("\n*****");
 //        position type:
@@ -142,27 +146,6 @@ public class TechJobs {
     }
 }
 
-
-
-//
-//        for (HashMap<String, String> row : allJobs) {
-//
-//          String aValue = row.get(column);
-//
-//            if (aValue.contains(value)) {
-//        jobs.add(row);
-//            }
-//                    }
-//
-//                    return jobs;
-
-//       ArrayList<String> results = JobData.findAll(columnChoice);
-//
-//
-//        // Print list of skills, employers, etc.
-//        for (String item : results) {
-//        System.out.println(item);
-//                    }
 
 //To do this, you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap. (structure pic in code review)
 // While you can get each of the items out of the HashMap using the known keys (employer, location, etc.),
