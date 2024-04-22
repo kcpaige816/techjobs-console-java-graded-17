@@ -10,7 +10,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -112,7 +112,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -120,34 +120,16 @@ public class TechJobs {
     // Print a list of jobs                      //key type //value type
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        if(someJobs.size() == 0) {
+        if (someJobs.size() == 0) {
             System.out.println("No Results");
         } else {
             for (int i = 0; i < someJobs.size(); i++) {
                 System.out.println("\n*****");
-                for (Map.Entry<String, Double> student : students.entrySet()) {
-                    System.out.println(student.getKey() + " (" + student.getValue() + ")");
-                    sum += student.getValue();
-                System.out.println();
+                for (Map.Entry<String, String> entry : someJobs.get(i).entrySet()) {
+                    System.out.println(entry.getKey() + ": " + entry.getValue());
+                }
+                System.out.println("*****");
             }
-                System.out.println("\n*****");
         }
-
-
-
-
-
-//        position type:
-//        name:
-//        employer:
-//        location:
-//        core competency:
-
     }
 }
-
-
-//To do this, you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap. (structure pic in code review)
-// While you can get each of the items out of the HashMap using the known keys (employer, location, etc.),
-// think instead about creating a nested loop to loop over each HashMap. If a new field is added to the job records,
-// this approach will print out the new field without any updates to printJobs.
