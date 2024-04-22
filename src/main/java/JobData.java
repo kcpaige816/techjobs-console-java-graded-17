@@ -94,10 +94,14 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
-            for (Map.Entry<String, String> entry : someJobs.get(i).entrySet())
 
-            if (aValue.contains(value)) {
-                jobs.add(row);
+
+            for (Map.Entry<String, String> job : row.entrySet()) {
+
+                if (job.getValue().contains(value) && !jobs.contains(row)) {
+                    jobs.add(row);
+                }// try to use .equalsIgnoreCase()? to pass last test
+                    //(w3schools)
             }
         }
 
