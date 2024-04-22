@@ -122,27 +122,27 @@ public class TechJobs {
 
         if(someJobs.size() == 0) {
             System.out.println("No Results");
+        } else {
+            for (int i = 0; i < someJobs.size(); i++) {
+                System.out.println("\n*****");
+                for (Map.Entry<String, Double> student : students.entrySet()) {
+                    System.out.println(student.getKey() + " (" + student.getValue() + ")");
+                    sum += student.getValue();
+                System.out.println();
+            }
+                System.out.println("\n*****");
         }
 
-        for (int job = 0; job < i.size(); job++) {
-
-            System.out.println();
-        }
-
-//        for (Map.Entry<String, Double> student : students.entrySet()) {
-//            System.out.println(student.getKey() + " (" + student.getValue() + ")");
-//            sum += student.getValue();
-//        } //// map loop structure from LC chap. 3, use instead of repeated variables
-        // |nest together|
 
 
-        System.out.println("\n*****");
+
+
 //        position type:
 //        name:
 //        employer:
 //        location:
 //        core competency:
-        System.out.println("*****");
+
     }
 }
 
