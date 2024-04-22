@@ -95,8 +95,8 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) { //loop over each row in allJobs ArrayList
-            for (HashMap.Entry<String, String> job : row.entrySet()) { //loop over each entry (job) in jobs ArrayList rows
-                if (job.getValue().toLowerCase().contains(value)) {
+            for (HashMap.Entry<String, String> entry : row.entrySet()) { //loop over each entry in each row
+                if (entry.getValue().toLowerCase().contains(value) && !jobs.contains(row)) {
                     jobs.add(row);
                 }
 
